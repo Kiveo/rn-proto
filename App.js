@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Sample Text Entry</Text>
-      <View style={{flexDirection: 'row', justifyContent: "space-between", alignItems: "center" }}>
+      <View style={styles.inputWrapper}>
         <TextInput placeholder="New Task..." style={styles.input} />
         <Button title="Create"/>
       </View>
@@ -20,6 +20,13 @@ const styles = StyleSheet.create({
   container: {
     padding: 50,
   },
+  
+  inputWrapper: {
+    flexDirection: 'row', 
+    justifyContent: "space-between", 
+    alignItems: "center"
+  },
+  
   input: {
     borderWidth: 1,
     borderColor: 'black',
