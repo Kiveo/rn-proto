@@ -1,19 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Sample Text Entry</Text>
+      <View style={{flexDirection: 'row', justifyContent: "space-between", alignItems: "center" }}>
+        <TextInput placeholder="New Task..." style={styles.input} />
+        <Button title="Create"/>
+      </View>
+      <View>
+        {/* list of tasks */}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 50,
   },
+  input: {
+    borderWidth: 1,
+    borderColor: 'black',
+    padding: 10,
+    width: '75%',
+  } 
 });
